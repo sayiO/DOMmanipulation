@@ -3,48 +3,75 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- make sure for now that your script tag is in the head -->
     <title>Document</title>
 </head>
 
-<body id="container">
-    <div class="hello">
-        Hello World
+<body>
+    <div class="header">
     </div>
-    <div class="hello">
-        Hello Everyone!
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
     </div>
-    <a href="#">This link</a>
-    <button>Click me!</button>
     <script>
-        // you can put your JavaScript in here, or include an external file.
+        //1.
+        document.getElementById("container");
+        //2.
+        document.querySelector("#container");
 
-        let firstDiv = document.getElementsByTagName("div")[0];
-        firstDiv.innerHTML = "hie tinoe";
-        firstDiv.style.color = "teal";
+        //3.
+        document.getElementsByClassName(".second");
 
-        let secondDiv = document.getElementsByTagName("div")[1];
-        secondDiv.innerHTML = "hie my name is onias";
-        secondDiv.style.backgroundColor = "teal";
+        //4
 
-        let divs = document.querySelectorAll("div");
+        document.getElementByTagName("ol .third")
 
-        for (let i = 0; i < divs.length; i++) {
-            divs[i].style.backgroundColor = "green";
+
+        //5.
+
+        document.getElementById("container").innerText = "Hello";
+
+        //6.
+
+        let footer = document.getElementByTagName("div")[1];
+        footer.classList.add("main");
+        //7.
+        footer.classList.remove("main");
+
+        //8.
+
+        let li = document.createElement('li');
+        //9.
+        li.innerText = "four";
+
+        //10
+        let ul = document.getElementByTagName('ul');
+        ul.appendChild(li);
+
+        //11
+
+        let ol = document.getElementByTagName("ol");
+        let li = ol.children;
+        for (let i = 0; i < li.length; i++) {
+            li[i].style.backgroundColor = "green";
+
         }
-
-        let newButton = document.createElement("button");
-        newButton.innerText = "The latest Button";
-
-        document.getElementById("container").appendChild(newButton);
-
-
-        let linkToBe = document.querySelector('a');
-        let domPart = document.getElementById("container");
-        domPart.removeChild(linkToBe);
-        //domPart.removeChild(document.getElementsByTagName('div')[0]);
-        domPart.removeChild(document.getElementsByTagName('div')[1]);
+        //12
+        let body = document.getElementByTagName("body");
+        let div2 = document.getElementByTagName('div')[1];
+        body.removeChild(div2);
     </script>
-</body>
+
+</body>s
 
 </html>
