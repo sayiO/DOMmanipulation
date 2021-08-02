@@ -21,11 +21,29 @@
 
         let firstDiv = document.getElementsByTagName("div")[0];
         firstDiv.innerHTML = "hie tinoe";
-        firstDiv.style.color = "red";
+        firstDiv.style.color = "teal";
 
         let secondDiv = document.getElementsByTagName("div")[1];
         secondDiv.innerHTML = "hie my name is onias";
         secondDiv.style.backgroundColor = "teal";
+
+        let divs = document.querySelectorAll("div");
+
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.backgroundColor = "green";
+        }
+
+        let newButton = document.createElement("button");
+        newButton.innerText = "The latest Button";
+
+        document.getElementById("container").appendChild(newButton);
+
+
+        let linkToBe = document.querySelector('a');
+        let domPart = document.getElementById("container");
+        domPart.removeChild(linkToBe);
+        //domPart.removeChild(document.getElementsByTagName('div')[0]);
+        domPart.removeChild(document.getElementsByTagName('div')[1]);
     </script>
 </body>
 
