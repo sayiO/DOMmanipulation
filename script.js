@@ -1,15 +1,14 @@
-function firstClick() {
-    alert("you clicked the first button");
+let btns = document.getElementsByTagName("button");
+
+function alertData() {
+    alert("bithch you can be good at clicking them buttons if you believe bitch....");
 
 }
 
-let secondBtn = document.querySelector(".second_button");
-secondBtn.onclick = function() {
-    alert("i have clicked the second button");
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", alertData);
 }
 
-
-let thirdBtn = document.querySelector(".third_button");
-thirdBtn.addEventListener("click", function() {
-    alert("so apparently you have clicked the third button");
-});
+for (let i = 0; i < btns.length; i++) {
+    btns[i].removeEventListener("click", alertData);
+}
