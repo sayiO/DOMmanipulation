@@ -7,71 +7,10 @@
 </head>
 
 <body>
-    <div class="header">
-    </div>
-    <section id="container">
-        <ul>
-            <li class="first">one</li>
-            <li class="second">two</li>
-            <li class="third">three</li>
-        </ul>
-        <ol>
-            <li class="first">one</li>
-            <li class="second">two</li>
-            <li class="third">three</li>
-        </ol>
-    </section>
-    <div class="footer">
-    </div>
-    <script>
-        //1.
-        document.getElementById("container");
-        //2.
-        document.querySelector("#container");
-
-        //3.
-        document.getElementsByClassName(".second");
-
-        //4
-
-        document.getElementByTagName("ol .third")
-
-
-        //5.
-
-        document.getElementById("container").innerText = "Hello";
-
-        //6.
-
-        let footer = document.getElementByTagName("div")[1];
-        footer.classList.add("main");
-        //7.
-        footer.classList.remove("main");
-
-        //8.
-
-        let li = document.createElement('li');
-        //9.
-        li.innerText = "four";
-
-        //10
-        let ul = document.getElementByTagName('ul');
-        ul.appendChild(li);
-
-        //11
-
-        let ol = document.getElementByTagName("ol");
-        let li = ol.children;
-        for (let i = 0; i < li.length; i++) {
-            li[i].style.backgroundColor = "green";
-
-        }
-        //12
-        let body = document.getElementByTagName("body");
-        let div2 = document.getElementByTagName('div')[1];
-        body.removeChild(div2);
-    </script>
-
-</body>s
+    <button class="first_button" onclick="firstClick()">Click me first!</button>
+    <button class="second_button">Click me second!</button>
+    <button class="third_button">Click me third!</button>
+    <script src="script.js"></script>
+</body>
 
 </html>
