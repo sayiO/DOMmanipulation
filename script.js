@@ -12,3 +12,13 @@ for (let i = 0; i < btns.length; i++) {
 for (let i = 0; i < btns.length; i++) {
     btns[i].removeEventListener("click", alertData);
 }
+
+let listItems = document.querySelectorAll("li");
+
+
+
+for (let i = 0; i < listItems.length; i++) {
+    listItems[i].addEventListener("click", function(event) {
+        alert("you have selected the item " + event.target.innerText);
+    });
+}
