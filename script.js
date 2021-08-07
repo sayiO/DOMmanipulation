@@ -17,9 +17,27 @@ for (let i = 0; i < myListItems.length; i++) {
 }
 
 let close = document.getElementsByClassName("close");
+close[i].onclick = function() {
+    let div = this.parentElement;
+    div.style.display = "none";
+}
 for (let i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-        let div = this.parentElement;
-        div.style.display = "none";
-    }
+
+}
+
+//print first and last 
+
+function printFirstAndLast(arr) {
+
+    let whole = [];
+    arr.forEach(function(val, index, arr) {
+
+        let first = val[0];
+        let last = val[val.length - 1];
+        whole.push(first + last);
+        console.log(whole);
+
+    });
+
+
 }
