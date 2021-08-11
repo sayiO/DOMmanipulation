@@ -108,3 +108,11 @@ function filterLetters(arr, val) {
     });
 
 }
+
+//additional array methods
+//some
+let ages = [3, 10, 18, 20];
+let value = ages.find(function(age) {
+    return age > 5;
+});
+document.getElementById("demo").innerHTML = value;
