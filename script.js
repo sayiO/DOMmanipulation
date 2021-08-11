@@ -81,3 +81,30 @@ function doubleArray(arr) {
         return val * 2;
     });
 }
+
+//extracting key values using map function
+
+function extractKey(arr) {
+    return arr.map(function(arr, ) {
+        return arr[arr.key];
+    });
+}
+
+//filter array exercises
+
+function filterLetters(arr, val) {
+    let count = 0;
+    arr.filter(function(arr) {
+        for (let j = 0; j < arr.length; j++) {
+
+            if (arr[j].toLowerCase() == val) {
+                ++count;
+            }
+
+        }
+
+        return count;
+
+    });
+
+}
