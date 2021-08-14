@@ -1,118 +1,27 @@
-window.onload = function myToDO() {
-    document.getElementById("toDo").style.display = "inline";
-}
-
-window.onload = function addListItems() {
-    let taskName = document.getElementById("todo");
-
-}
-
-let myListItems = document.getElementsByTagName("li");
-for (let i = 0; i < myListItems.length; i++) {
-    let span = document.createElement("span");
-    let txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    myListItems[i].appendChild(span);
-}
-
-let close = document.getElementsByClassName("close");
-close[i].onclick = function() {
-    let div = this.parentElement;
-    div.style.display = "none";
-}
-for (let i = 0; i < close.length; i++) {
-
-}
-
-//print first and last 
-
-function printFirstAndLast(arr) {
-
-    let whole = [];
-    arr.forEach(function(val, index, arr) {
-
-        let first = val[0];
-        let last = val[val.length - 1];
-        whole.push(first + last);
-        console.log(whole);
-
-    });
+$(document).ready(function() {
 
 
-}
 
-//getting element's double values using forEach iterator
+    //selecting footer element
 
-function double(arr) {
-    let doubledArr = [];
-    arr.forEach(function(val) {
-        doubledArr.push(val * 2);
-    })
-    return doubledArr;
-}
+    let footer = $("footer");
+    //select div with id container
 
-// adding key and values to an array of objects using forEach iterator
+    let div = $("#container");
+    //listitem inside nav class
+    let listItems = $(".nav li");
 
-function addKeyAndValue(arr, key, value) {
-    let newObj = [];
-    arr.forEach(function(arr) {
-        arr[key] = "value";
-        newObj.push(arr);
-    })
-    return newObj;
+    //third list item inside div with class list-container
 
-}
+    let listItems2 = $(".list-container li:nth-child(3)");
 
-//using a map function 
 
-function valTimesIndex(arr) {
-    return arr.map(function(val, index) {
-        return val * index;
-    });
+    //select only last list item in ul
 
-}
+    lastItem = $("ul li:last-child")
 
-//returning doubles values using map
-function doubleArray(arr) {
-    // return the result of arr.map
-    return arr.map(function(val) {
-        // return a new array with each value doubled
-        return val * 2;
-    });
-}
 
-//extracting key values using map function
 
-function extractKey(arr) {
-    return arr.map(function(arr, ) {
-        return arr[arr.key];
-    });
-}
 
-//filter array exercises
 
-function filterLetters(arr, val) {
-    let count = 0;
-    arr.filter(function(arr) {
-        for (let j = 0; j < arr.length; j++) {
-
-            if (arr[j].toLowerCase() == val) {
-                ++count;
-            }
-
-        }
-
-        return count;
-
-    });
-
-}
-
-//additional array methods
-//some
-let ages = [3, 10, 18, 20];
-let value = ages.find(function(age) {
-    return age > 5;
 });
-document.getElementById("demo").innerHTML = value;
