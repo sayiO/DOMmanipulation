@@ -1,38 +1,24 @@
 $(document).ready(function() {
-    $("article").addClass("hidden");
-    $("article").removeClass("hidden");
-    $("article").toggleClass("hidden");
-    //$("li").text("madii cde");
-    $("input").val("this is  the new value");
 
 
+    console.log("Let.s get ready to party with JQuery");
 
-    //accessing elements
+    //2
 
-    $("article").css("background-color", "teal");
-    $("article").css("style", "display:flex;");
+    $("article img").addClass("image-center");
 
-    //DOM traversal........
-    let childElements = $("article").find("div").children();
-    let el = $("article").find("div").children();
+    //3.
 
-    //creating and appending elements to the dom
-    let newP = $("<p>");
-    newP.text("I am the new king in town gentlemen");
-    newP.css("color", "red");
-    $("article").append(newP);
+    $("article p:last-child").remove();
 
-    let anotherDiv = $("<p>", {
-        text: "this is a latest div gentlemen",
-        css: {
-            color: "green",
-            background: "pink",
-            "font-size": "4em"
+    //4.
 
-        }
-    });
+    $("#title").css("font-size", Math.random() * 100);
 
-    $("article").append(anotherDiv);
+    //5.
+    let newList1 = $("<li>");
+    newList1.text("Heyy Marian ati anoda kusvirwa")
+    $("ol").append(newList1);
 
 
-})
+});
